@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobile.App.Views.User.RegisterTermAndConditionView"
+             xmlns:viewModelBase="clr-namespace:Mobile.App.ViewModels.Base"
+             xmlns:controls="clr-namespace:Mobile.App.Controls"
+             viewModelBase:ViewModelLocator.AutoWireViewModel="true"
+             BackgroundColor="#e5e5e5">
+    <NavigationPage.TitleView>
+        <Label Text="Términos de uso" 
+               VerticalOptions="Center" 
+               HorizontalOptions="Center"
+               FontSize="19"
+               FontAttributes="Bold"
+               TextColor="#ffffff"/>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <!--<AbsoluteLayout>
+            <Image Source="headers" 
+                   HorizontalOptions="FillAndExpand"
+                   Aspect="AspectFit"
+                   VerticalOptions="Start"/>
+            -->
+        <!--<Image Source="xamarin_logo"
+                   VerticalOptions="Start"
+                   HorizontalOptions="CenterAndExpand"
+                   Margin="0,10"/>-->
+        <!--
+        
+        </AbsoluteLayout>-->
+        <Grid>
+            <StackLayout Spacing="0" BackgroundColor="White">
+                <controls:CustomLocalPDFView Uri="images/default/sample.pdf"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+                <StackLayout Orientation="Horizontal" HorizontalOptions="End" VerticalOptions="End" BackgroundColor="White" Spacing="0" Margin="0"  Padding="0">
+                    <Button Margin="0" Image="ic_share" HorizontalOptions="End" Command="{Binding ShareCommand}" Padding="0" BackgroundColor="Transparent"></Button>
+                    <Button Margin="0" Image="ic_download" HorizontalOptions="End" VerticalOptions="End" Command="{Binding DownloadCommand}" BackgroundColor="Transparent" Padding="0"/>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>
